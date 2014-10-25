@@ -8,7 +8,7 @@ import os
 import re
 import urllib
 
-from getty import util
+from getty_art import util
 
 
 CATEGORIES = (

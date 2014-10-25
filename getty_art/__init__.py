@@ -2,7 +2,7 @@
 
 
 from __future__ import absolute_import
-from getty.getty import Scraper  # noqa
+from getty_art.getty_art import Scraper  # noqa
 
 
-__all__ = ['getty']
+__all__ = ['getty_art']
