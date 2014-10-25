@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='Getty Art',
+    name='GettyArt',
     version='0.0.1',
     author='Clemens Wolff',
     author_email='clemens.wolff+pypi@gmail.com',
