@@ -9,7 +9,7 @@ import urllib
 from getty import util
 
 
-CATEGORIES = [
+CATEGORIES = (
     'Architectural drawings',
     'Architecture',
     'Book',
@@ -31,7 +31,7 @@ CATEGORIES = [
     'Vessels',
     'Visual Material',
     'Watercolors (paintings)',
-]
+)
 
 
 class Scraper(object):
