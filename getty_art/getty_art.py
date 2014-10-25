@@ -78,8 +78,7 @@ class Scraper(object):
             set: The URLs for all images on the page
 
         """
-        image_re = re.compile(r'"(?P<url>http://www.getty.edu/art/collections'
-                              r'/images/enlarge/[^"]+)"')
+        image_re = re.compile(r'<a href="(?P<url>[^"]+)" class="cs-enlarge">')
         return set(match.group('url') for line in resultspage
                    for match in image_re.finditer(line))
 
