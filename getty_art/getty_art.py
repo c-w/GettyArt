@@ -46,6 +46,9 @@ class Scraper(object):
 
     """
     def __init__(self, category, batchsize=100, page=1):
+        if category not in CATEGORIES:
+            raise ValueError('unknown category "%s" - allowed values are "%s"'
+                             % (category, '", "'.join(CATEGORIES)))
         self._category = category
         self._batchsize = batchsize
         self._page = page
