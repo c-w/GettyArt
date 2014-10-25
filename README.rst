@@ -52,3 +52,14 @@ command downloads 2 watercolors to your current directory.
 .. image:: http://www.getty.edu/collection/GRI/thumb/grioc0005417-T.jpg
 
 --------------------------------------------------------------------------------
+
+
+Installation
+============
+
+GettyArt is on `PyPI <https://pypi.python.org/pypi/GettyArt>`_! This means that
+installing *getty_art* is as simple as:
+
+.. sourcecode :: sh
+
+    pip install GettyArt
