@@ -150,7 +150,7 @@ def _main():
                               'allowed values are: ' + ', '.join(CATEGORIES)))
     parser.add_argument('-l', '--limit', metavar='L', default=None, type=int,
                         help='maximum number of images to scrape')
-    parser.add_argument('-o', '--output', metavar='O', default=None,
+    parser.add_argument('-o', '--output', metavar='O', default='.',
                         help='directory in which to store images')
     parser.add_argument('-p', '--page', metavar='P', default=1,
                         help='results page at which to start scraping')
