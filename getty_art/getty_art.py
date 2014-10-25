@@ -65,7 +65,7 @@ class Scraper(object):
         """
         basename = os.path.basename(url)
         return (util.tmpfile(basename) if basedir is None
-                else os.path.join(basedir, basename))
+                else os.path.join(util.expandpath(basedir), basename))
 
     @classmethod
     def extract_images(cls, resultspage):

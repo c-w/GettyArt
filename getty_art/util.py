@@ -12,3 +12,12 @@ def tmpfile(suffix='', prefix='tmp', directory=None):
     filehandle, filename = tempfile.mkstemp(suffix, prefix, directory)
     os.close(filehandle)
     return filename
+
+
+def expandpath(path):
+    """Expands all the variables in a path.
+
+    """
+    path = os.path.expandvars(path)
+    path = os.path.expanduser(path)
+    return path
