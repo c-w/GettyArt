@@ -2,8 +2,8 @@
 import itertools
 import os
 import re
-import tempfile
 import urllib
+import util
 
 
 CATEGORIES = [
@@ -31,12 +31,6 @@ CATEGORIES = [
 ]
 
 
-def _tmpfile(suffix='', prefix='tmp', directory=None):
-    filehandle, filename = tempfile.mkstemp(suffix, prefix, directory)
-    os.close(filehandle)
-    return filename
-
-
 class Scraper(object):
     def __init__(self, category, batchsize=100, page=1):
         self._category = category
@@ -46,7 +40,7 @@ class Scraper(object):
     @classmethod
     def format_filename(cls, url, basedir=None):
         basename = os.path.basename(url)
-        return (_tmpfile(basename) if basedir is None
+        return (util.tmpfile(basename) if basedir is None
                 else os.path.join(basedir, basename))
 
     @classmethod
