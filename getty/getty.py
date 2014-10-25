@@ -81,3 +81,33 @@ class Scraper(object):
                 self._page += 1
             else:
                 break
+
+
+def _main():
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('category', metavar='category', choices=CATEGORIES,
+                        help=('type of images to scrape; '
+                              'allowed values are: ' + ', '.join(CATEGORIES)))
+    parser.add_argument('-l', '--limit', metavar='L', default=None, type=int,
+                        help='maximum number of images to scrape')
+    parser.add_argument('-o', '--output', metavar='O', default=None,
+                        help='directory in which to store images')
+    parser.add_argument('-p', '--page', metavar='P', default=1,
+                        help='results page at which to start scraping')
+    parser.add_argument('--batchsize', metavar='B', default=100,
+                        help='number of results to fetch per query')
+    args = parser.parse_args()
+
+    Scraper(
+        category=args.category,
+        batchsize=args.batchsize,
+        page=args.page,
+    ).scrape(
+        num=args.limit,
+        basedir=args.output,
+    )
+
+
+if __name__ == '__main__':
+    _main()
