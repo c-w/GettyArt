@@ -9,6 +9,6 @@ setup(
     url='https://github.com/c-w/GettyArt',
     download_url='http://pypi.python.org/pypi/GettyArt',
     license='LICENSE.txt',
-    description='Scraper for art available from getty.edu',
+    description='Scraper for the fine art on getty.edu',
     long_description=open('README.rst').read(),
 )
