@@ -1,9 +1,12 @@
 # pylint:disable=C0111
+from __future__ import absolute_import
+
 import itertools
 import os
 import re
 import urllib
-import util
+
+from getty import util
 
 
 CATEGORIES = [
